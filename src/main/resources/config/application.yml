@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:5000}
+  error.include-stacktrace: on_param
+
+spring:
+  application.name: jwt_demo
+
+  datasource:
+    username: ""
+    password: ""
+    url: "jdbc:h2:./jwt_demo"
+
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+  h2.console:
+    enabled: true
+    path: /h2console/
+    settings.web-allow-others: true
+
+logging.level:
+  root: INFO
+  web: DEBUG
